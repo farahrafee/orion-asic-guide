@@ -2,56 +2,21 @@
 sidebar_position: 2
 ---
 
-# Create a Document
+# Synthesis
 
-Documents are **groups of pages** connected through:
+If you run synthesis as is, the pads will be optimized away because they have no logic connections. In `syn.tcl`, you have to do `set_dont_touch` for all of your pads:
 
-- a **sidebar**
-- **previous/next navigation**
-- **versioning**
-
-## Create your first Doc
-
-Create a Markdown file at `docs/hello.md`:
-
-```md title="docs/hello.md"
-# Hello
-
-This is my **first Docusaurus document**!
+```tcl title="syn.tcl"
+   if {$vars(use_pad)} {
+      set ALL_PAD [get_cells {PI_* PO_* PTRI_* PP_* *_CORNER}]
+      set ALL_PIN [get_nets -of_objects [filter_collection
+   [get_pins -of_objects $ALL_PAD] "name =~ *PAD*"]]
+      set_dont_touch $ALL_PAD
+      set_dont_touch $ALL_PIN
+   }
+   set_dont_touch {VDDPST* VSSPST*}
 ```
 
-A new document is now available at [http://localhost:3000/docs/hello](http://localhost:3000/docs/hello).
+Before running synthesis, ensure that the `clk_list` is updated and that each clock is set to be asynchronous. The chip select timing may need to be handled as well. Look at `syn.tcl` in **DigitalCorePads** for reference.
 
-## Configure the Sidebar
 
-Docusaurus automatically **creates a sidebar** from the `docs` folder.
-
-Add metadata to customize the sidebar label and position:
-
-```md title="docs/hello.md" {1-4}
----
-sidebar_label: 'Hi!'
-sidebar_position: 3
----
-
-# Hello
-
-This is my **first Docusaurus document**!
-```
-
-It is also possible to create your sidebar explicitly in `sidebars.js`:
-
-```js title="sidebars.js"
-export default {
-  tutorialSidebar: [
-    'intro',
-    // highlight-next-line
-    'hello',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      items: ['tutorial-basics/create-a-document'],
-    },
-  ],
-};
-```

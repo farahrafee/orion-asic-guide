@@ -2,33 +2,66 @@
 sidebar_position: 3
 ---
 
-# Create a Blog Post
+# Automatic place and route (APR)
 
-Docusaurus creates a **page for each blog post**, but also a **blog index page**, a **tag system**, an **RSS** feed...
+After synthesis, check `syn/report/DigitalCorePads.area` to find the total cell area. To create a square chip, you will want to calculate the X and Y dimensions as:
 
-## Create your first Post
-
-Create a file at `blog/2021-02-28-greetings.md`:
-
-```md title="blog/2021-02-28-greetings.md"
----
-slug: greetings
-title: Greetings!
-authors:
-  - name: Joel Marcey
-    title: Co-creator of Docusaurus 1
-    url: https://github.com/JoelMarcey
-    image_url: https://github.com/JoelMarcey.png
-  - name: Sébastien Lorber
-    title: Docusaurus maintainer
-    url: https://sebastienlorber.com
-    image_url: https://github.com/slorber.png
-tags: [greetings]
----
-
-Congratulations, you have made your first post!
-
-Feel free to play around and edit this post as much as you like.
+```math
+CoreX = CoreY = /sqrt(Area/Density)
 ```
 
-A new blog post is now available at [http://localhost:3000/blog/greetings](http://localhost:3000/blog/greetings).
+For the ERASICv1, the area is 2.41 mm^2, so to achieve a density of 70%, a width of 1860 \mu m is used. Using a pad width of 30, a pad height of 190, and a power gap of 20, initialize your floorplan:
+
+```tcl
+    set PadWidth 30
+    set PadHeight 190
+    set PowerGap 20
+
+    set CoreX 2030
+    set CoreY 1530
+
+    set DigitalX [expr {$CoreX + 2*$PadHeight + 2*$PowerGap}]
+    set DigitalY [expr {$CoreY + 2*$PadHeight + 2*$PowerGap}]
+    set PadOffsetX [expr {$DigitalX - $PadHeight}]
+    set PadOffsetY [expr {$DigitalY - $PadHeight}]
+
+    init_design
+    setDesignMode -process 65
+    floorPlan -s $CoreX $CoreY $PowerGap $PowerGap $PowerGap $PowerGap
+    setFlipping f
+    redraw
+    fit
+```
+
+Next, you will need to load the I/O pads using a .tcl script. The .tcl script can be generated using a .py script located in the **PY_SCRIPTS** directory. The `WritePinLib.py` script can be imported into another .py script that generates the .tcl script.
+
+The pads will need to be defined according to their north, east, south, and west locations. The order the pads are listed is critical here. Here are a few things to consider:
+
+
+- To determine the placement of I/O pads, consider how it will route and the power distribution. It is ideal for power to be near critical high-frequency signals and for clocks to be adjacent to VSSPST.
+- If in **DigitalCorePads**, the pad is created using a generate loop, then the naming convention will be different in the .tcl script. For instance, for `PTRI_CSPI_DATA[0]`, the pad name will end up being `PTRI_CSPI_DATA_0_PTRI_CSPI_DATA`.
+- While VSS and VSSPST may not be included in the pin diagram, they should be include as pads here.
+- Use the same floorplan dimensions as defined in `apr.tcl`.
+- Write the pads for the four corners and the four edges.
+
+Look at `DigitalCorePads_pads.py` in `PY_SCRIPTS/pinout` for reference. Run the .py script to generate the .tcl script. The spacing of all four edges will be printed to the terminal, and you will need those numbers later. Copy the .tcl script into `apr/design`. Before running APR, ensure that the `clk_list` is updated and I/O fillers are being added to all four edges. This will result in a final .gds that can be found at `apr/gds/DigitalCorePads.gds2`.
+
+# Innovus Violations
+
+After running APR, the design will open in Innovus. If you exit Innovus and want to re-open Innovus and load the design, navigate to the **DigitalCorePads/apr** folder and type `innovus`. Then, write the following command into the Innovus terminal:
+
+```bash
+    innovus 1> restoreDesign ./saved/final_design.enc.dat
+```
+
+Any white X's refer to DRC violations in the design and must be resolved before moving forward. Navigate to **ER_ASIC_Rev1/TCL_SCRIPTS/apr_common/nanoroute_flow.tcl**. There are several commands that can be run to resolve these errors. Write the following commands into the Innovus terminal:
+
+```bash
+    innovus 2> ecoRoute -fix_drc
+    innovus 3> editDeleteViolations
+    innovus 4> ecoRoute
+```
+
+These three commands will 1) attempt to resolve the violations, 2) delete the remaining violations by removing the corresponding nets, and 3) re-route the nets. If the first command resolves all violations, then there is no need to do the remaining two commands.
+
+You will need to complete the rest of APR by re-running the rest of the APR commands in the Innovus terminal. From `apr.tcl`, copy and paste the text starting from `set NumCPUs` to `set toplevel`. Then, from `nanoroute_flow.tcl`, copy and paste the remaining commands after `ecoRoute -fix_drc`. Then, from `apr.tcl`, copy and paste the final command that runs `write_outputs.tcl`.

@@ -2,87 +2,15 @@
 sidebar_position: 2
 ---
 
-# Translate your site
+# Assemble chip levels until bond-pad level
 
-Let's translate `docs/intro.md` to French.
+In the Library Manager, select the library you created and navigate to **File** -> **New** -> **Cell View**. Name the cell **ASIC_ALL**, and select the view to be "layout." The Virtuoso Layout Suite will open.
 
-## Configure i18n
+Navigate to **Create** -> **Instance** (or click **i** on your keyboard) to create an instance of a cell. For cell, select **DigitalCorePads**, and for view, select "layout." Line up the bottom left corner with the origin for now.
 
-Modify `docusaurus.config.js` to add support for the `fr` locale:
+Now, we want to add the bond-pads. Create another instance of a cell, but select **PAD60GU** and check the box for "Create as mosaic." For "rows/columns," type the number corresponding to the number of pads on that edge, and for 
+"delta y/x," type the number of the spacing for that edge using the corresponding number that was printed to the terminal earlier when generating the .tcl script for APR. Rotate it so that the wider side points to the outside of the chip and line up the narrow side with the pads. Repeat for all four edges.
 
-```js title="docusaurus.config.js"
-export default {
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'fr'],
-  },
-};
-```
+Now, we want to add the labels. Navigate to **Create** -> **Label** (or click **l** on your keyboard) to create a label. Name it accordingly, select the AP pin layer, and increase the font height. Place it over the bond-pad. A dialog will appear, prompting you to "choose object for label creation." Select "PAD60GU (mosaic)." Repeat for all pads.
 
-## Translate a doc
-
-Copy the `docs/intro.md` file to the `i18n/fr` folder:
-
-```bash
-mkdir -p i18n/fr/docusaurus-plugin-content-docs/current/
-
-cp docs/intro.md i18n/fr/docusaurus-plugin-content-docs/current/intro.md
-```
-
-Translate `i18n/fr/docusaurus-plugin-content-docs/current/intro.md` in French.
-
-## Start your localized site
-
-Start your site on the French locale:
-
-```bash
-npm run start -- --locale fr
-```
-
-Your localized site is accessible at [http://localhost:3000/fr/](http://localhost:3000/fr/) and the `Getting Started` page is translated.
-
-:::caution
-
-In development, you can only use one locale at a time.
-
-:::
-
-## Add a Locale Dropdown
-
-To navigate seamlessly across languages, add a locale dropdown.
-
-Modify the `docusaurus.config.js` file:
-
-```js title="docusaurus.config.js"
-export default {
-  themeConfig: {
-    navbar: {
-      items: [
-        // highlight-start
-        {
-          type: 'localeDropdown',
-        },
-        // highlight-end
-      ],
-    },
-  },
-};
-```
-
-The locale dropdown now appears in your navbar:
-
-![Locale Dropdown](./img/localeDropdown.png)
-
-## Build your localized site
-
-Build your site for a specific locale:
-
-```bash
-npm run build -- --locale fr
-```
-
-Or build your site to include all the locales at once:
-
-```bash
-npm run build
-```
+You will also need to create a pin for the POC pad in the **ASIC_ALL** layout to pass LVS. Navigate to the PVDD2POC pad and zoom in on the rings towards the inside of the I/O pads. You will find metal on the M3 layer labeled with POC. Create a label, and name it "POC", select the M3 pin layer, and decrease the font height if needed. Place it over the POC metal.

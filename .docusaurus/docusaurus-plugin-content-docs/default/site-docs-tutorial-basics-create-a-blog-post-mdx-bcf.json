@@ -1,7 +1,7 @@
 {
   "id": "tutorial-basics/create-a-blog-post",
-  "title": "Create a Blog Post",
-  "description": "Docusaurus creates a page for each blog post, but also a blog index page, a tag system, an RSS feed...",
+  "title": "Automatic place and route (APR)",
+  "description": "After synthesis, check syn/report/DigitalCorePads.area to find the total cell area. To create a square chip, you will want to calculate the X and Y dimensions as:",
   "source": "@site/docs/tutorial-basics/create-a-blog-post.mdx",
   "sourceDirName": "tutorial-basics",
   "slug": "/tutorial-basics/create-a-blog-post",
@@ -17,7 +17,7 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Create a Document",
+    "title": "Synthesis",
     "permalink": "/docs/tutorial-basics/create-a-document"
   },
   "next": {

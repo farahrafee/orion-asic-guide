@@ -1,7 +1,7 @@
 {
   "id": "tutorial-extras/translate-your-site",
-  "title": "Translate your site",
-  "description": "Let's translate docs/intro.md to French.",
+  "title": "Assemble chip levels until bond-pad level",
+  "description": "In the Library Manager, select the library you created and navigate to File -> New -> Cell View. Name the cell ASIC_ALL, and select the view to be \"layout.\" The Virtuoso Layout Suite will open.",
   "source": "@site/docs/tutorial-extras/translate-your-site.mdx",
   "sourceDirName": "tutorial-extras",
   "slug": "/tutorial-extras/translate-your-site",
@@ -17,7 +17,7 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Manage Docs Versions",
+    "title": "Create a new project library",
     "permalink": "/docs/tutorial-extras/manage-docs-versions"
   }
 }

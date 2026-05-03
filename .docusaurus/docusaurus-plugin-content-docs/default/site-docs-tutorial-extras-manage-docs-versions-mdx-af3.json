@@ -1,7 +1,7 @@
 {
   "id": "tutorial-extras/manage-docs-versions",
-  "title": "Manage Docs Versions",
-  "description": "Docusaurus can manage multiple versions of your docs.",
+  "title": "Create a new project library",
+  "description": "Open Cadence from ~/Cadence. From the main Virtuoso window, navigate to File -> New -> Library to open the Library Manager. Enter the desired library name (e.g., ER_ASIC_Rev1_Tapeout), and select \"Attach to an existing technology library.\" Attach the new library to the tsmcN65 technology library in the subsequent window.",
   "source": "@site/docs/tutorial-extras/manage-docs-versions.mdx",
   "sourceDirName": "tutorial-extras",
   "slug": "/tutorial-extras/manage-docs-versions",
@@ -21,7 +21,7 @@
     "permalink": "/docs/category/tutorial---extras"
   },
   "next": {
-    "title": "Translate your site",
+    "title": "Assemble chip levels until bond-pad level",
     "permalink": "/docs/tutorial-extras/translate-your-site"
   }
 }

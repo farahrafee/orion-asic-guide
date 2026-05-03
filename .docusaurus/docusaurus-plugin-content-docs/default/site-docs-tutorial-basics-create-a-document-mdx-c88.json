@@ -1,7 +1,7 @@
 {
   "id": "tutorial-basics/create-a-document",
-  "title": "Create a Document",
-  "description": "Documents are groups of pages connected through:",
+  "title": "Synthesis",
+  "description": "If you run synthesis as is, the pads will be optimized away because they have no logic connections. In syn.tcl, you have to do setdonttouch for all of your pads:",
   "source": "@site/docs/tutorial-basics/create-a-document.mdx",
   "sourceDirName": "tutorial-basics",
   "slug": "/tutorial-basics/create-a-document",
@@ -17,11 +17,11 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Create a Page",
+    "title": "Generate a pad-level module",
     "permalink": "/docs/tutorial-basics/create-a-page"
   },
   "next": {
-    "title": "Create a Blog Post",
+    "title": "Automatic place and route (APR)",
     "permalink": "/docs/tutorial-basics/create-a-blog-post"
   }
 }
