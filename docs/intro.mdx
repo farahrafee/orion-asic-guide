@@ -1,0 +1,69 @@
+---
+sidebar_position: 1
+---
+
+## Top module (ER_ASIC_Rev1)
+
+The directory **ER_ASIC_Rev1** should contain the following directories:
+
+- **CAPTBLS**: Contains 3 .captbl files (worst, typical, and best), which are needed for APR (mmmc.tcl)
+- **LOCAL_LIBS**: Contains technology .lef files
+- **MODULES**: Contains modules, each with their own directories for RTL, SYN, and APR
+- **PADS**: Contains the pads from TSMC
+- **PY_SCRIPTS**: Contains python scripts, including for pin/pad generation
+- **TCL_SCRIPTS**: Contains common .tcl scripts for SYN and APR
+
+The top-level module, **DigitalCore**, and the pad-level module, **DigitalCorePads**, are located in the **MODULES** directory.
+
+## 65 nm PDK
+
+The directory called **65NM_PDK_ZIP** contains the PDK. In this project, we are interested in:
+
+- **Technology**: 65 nm
+- **Flavor**: MS RF GP
+   - **MS**: mixed-signal
+   - **RF**: radio frequency
+   - **GP**: general purpose
+- **Metal**: 1p9m_6X1Z1U
+   - **1p**: 1 polysilicon layer
+   - **9m**: 9 total metal layers
+   - **6X**: 6 standard metal layers
+   - **1Z**: 1 thick metal layer
+   - **1U**: 1 ultra-thick metal layer
+
+## TSMC 65 nm I/O
+
+The directory called **TSMC_65nm_IO** contains several design kits (library views) that are named using the format NAME_NUMBER_KIT.tar.gz. Each part refers to:
+
+- **NAME**: The name of the library/IP
+- **NUMBER**: The version number
+- **KIT**: The design kit initials
+
+We want to select the desired design kits and move them into a directory called **PADS** for ease of use. For the library/IP, we are interested in tpfn. For the version number, we are primarily interested in 200b and 200c.
+
+Navigate to `TSMC_65nm_IO/IO/tpfn65gpgv2od3_200d`. Copy the desired design kits into **PADS**, unzip them, and rename for ease. We are interested in the following files:
+
+- **TSMCHOME_DOC**: `tpfn65gpgv2od3_200b_doc.tar.gz`
+- **TSMCHOME_GDS**: `tpfn65gpgv2od3_200c_gdsu9lm.tar.gz`
+- **TSMCHOME_LEF**: `tpfn65gpgv2od3_200c_sefu9lm.tar.gz`
+- **TSMCHOME_NLDM**: `tpfn65gpgv2od3_200b_nldm.tar.gz`
+- **TSMCHOME_SPI**: `tpfn65gpgv2od3_200b_spi.tar.gz`
+- **TSMCHOME_VLG**: `tpfn65gpgv2od3_140c_vlg.tar.gz`
+
+Information about these files can be found in `anunistdiogeneral_v2.00.pdf`.
+
+The following pads are used in **ER_ASIC_Rev1**:
+
+- **PVDD2DGZ**: Power pad for I/O power supply
+- **PVDD1DGZ**: Power pad for core power supply
+- **PVSS2DGZ**: Ground pad for I/O ground supply
+- **PVSS1DGZ**: Ground pad for core ground supply
+- **PDIDGZ**: Input pad
+- **PDUDGZ**: Input pad with pull-up
+- **PDO24CDG**: Output pad
+- **PCORNER**: Corner cell
+- **PDB24DGZ**: Tri-state output pad with input
+- **PDU24DGZ**: Tri-state output pad with input and pull-up
+- **PVDD2POC**: Power-on control power pad for I/O power supply
+
+Information about these files can be found in the **TSMCHOME_DOC** directory.

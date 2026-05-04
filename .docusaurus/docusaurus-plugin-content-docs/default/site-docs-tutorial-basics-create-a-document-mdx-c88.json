@@ -1,0 +1,27 @@
+{
+  "id": "tutorial-basics/create-a-document",
+  "title": "Synthesis",
+  "description": "If you run synthesis as is, the pads will be optimized away because they have no logic connections. In syn.tcl, you have to do setdonttouch for all of your pads:",
+  "source": "@site/docs/tutorial-basics/create-a-document.mdx",
+  "sourceDirName": "tutorial-basics",
+  "slug": "/tutorial-basics/create-a-document",
+  "permalink": "/docs/tutorial-basics/create-a-document",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/tutorial-basics/create-a-document.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Generate a pad-level module",
+    "permalink": "/docs/tutorial-basics/create-a-page"
+  },
+  "next": {
+    "title": "Automatic place and route (APR)",
+    "permalink": "/docs/tutorial-basics/create-a-blog-post"
+  }
+}
