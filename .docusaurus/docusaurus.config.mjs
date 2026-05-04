@@ -7,32 +7,10 @@ export default {
   "title": "Backend Flow",
   "tagline": "Farah Mohammed Rafee",
   "favicon": "img/favicon.ico",
-  "url": "https://your-docusaurus-site.example.com",
-  "baseUrl": "/",
-  "organizationName": "facebook",
-  "projectName": "docusaurus",
-  "future": {
-    "v4": {
-      "removeLegacyPostBuildHeadAttribute": true,
-      "useCssCascadeLayers": true,
-      "siteStorageNamespacing": true,
-      "fasterByDefault": true,
-      "mdx1CompatDisabledByDefault": true
-    },
-    "experimental_vcs": {},
-    "experimental_router": "browser",
-    "faster": {
-      "swcJsLoader": true,
-      "swcJsMinimizer": true,
-      "swcHtmlMinimizer": true,
-      "lightningCssMinimizer": true,
-      "mdxCrossCompilerCache": true,
-      "rspackBundler": true,
-      "rspackPersistentCache": true,
-      "ssgWorkerThreads": true,
-      "gitEagerVcs": true
-    }
-  },
+  "url": "https://farahrafee.github.io",
+  "baseUrl": "/backend-flow/",
+  "organizationName": "farahrafee",
+  "projectName": "backend-flow",
   "onBrokenLinks": "throw",
   "i18n": {
     "defaultLocale": "en",
@@ -373,7 +351,29 @@ export default {
   "baseUrlIssueBanner": true,
   "storage": {
     "type": "localStorage",
-    "namespace": true
+    "namespace": false
+  },
+  "future": {
+    "v4": {
+      "removeLegacyPostBuildHeadAttribute": false,
+      "useCssCascadeLayers": false,
+      "siteStorageNamespacing": false,
+      "fasterByDefault": false,
+      "mdx1CompatDisabledByDefault": false
+    },
+    "faster": {
+      "swcJsLoader": false,
+      "swcJsMinimizer": false,
+      "swcHtmlMinimizer": false,
+      "lightningCssMinimizer": false,
+      "mdxCrossCompilerCache": false,
+      "rspackBundler": false,
+      "rspackPersistentCache": false,
+      "ssgWorkerThreads": false,
+      "gitEagerVcs": false
+    },
+    "experimental_vcs": {},
+    "experimental_router": "browser"
   },
   "onBrokenAnchors": "warn",
   "onDuplicateRoutes": "warn",
@@ -394,9 +394,9 @@ export default {
     "mermaid": false,
     "emoji": true,
     "mdx1Compat": {
-      "comments": false,
-      "admonitions": false,
-      "headingIds": false
+      "comments": true,
+      "admonitions": true,
+      "headingIds": true
     },
     "anchors": {
       "maintainCase": false

@@ -5,7 +5,7 @@
   "source": "@site/docs/bond-pad-level/translate-your-site.mdx",
   "sourceDirName": "bond-pad-level",
   "slug": "/bond-pad-level/translate-your-site",
-  "permalink": "/docs/bond-pad-level/translate-your-site",
+  "permalink": "/backend-flow/docs/bond-pad-level/translate-your-site",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/bond-pad-level/translate-your-site.mdx",
@@ -18,6 +18,6 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Create a new project library",
-    "permalink": "/docs/bond-pad-level/manage-docs-versions"
+    "permalink": "/backend-flow/docs/bond-pad-level/manage-docs-versions"
   }
 }

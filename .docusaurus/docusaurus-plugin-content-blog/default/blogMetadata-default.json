@@ -1,5 +1,5 @@
 {
-  "blogBasePath": "/blog",
+  "blogBasePath": "/backend-flow/blog",
   "blogTitle": "Blog",
-  "authorsListPath": "/blog/authors"
+  "authorsListPath": "/backend-flow/blog/authors"
 }
