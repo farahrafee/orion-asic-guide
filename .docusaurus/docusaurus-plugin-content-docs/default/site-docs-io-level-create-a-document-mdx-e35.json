@@ -18,7 +18,7 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Generate a pad-level module",
-    "permalink": "/backend-flow/docs/io-level/create-a-page"
+    "permalink": "/backend-flow/docs/io-level/pad-level-module"
   },
   "next": {
     "title": "Automatic place and route (APR)",

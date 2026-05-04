@@ -1,0 +1,11 @@
+---
+sidebar_position: 1
+---
+
+# Pad-level module
+
+Create a module called **DigitalCorePads** that instantiates the "logical" top-level (**DigitalCore**), as well as the I/O pads. You will also need a dummy holder for **PCORNER** that can be included in the RTL folder of **DigitalcorePads**.
+
+Table shows the external I/O of the ERASICv1 with 32 pins:
+
+There should only be one input port each for the I/O VDDPST and VSSPST so that one unified power net connects to all VDDPST/VSSPST pins across all pad instances. The core VDD and VSS can just be global nets. Additionally, one of the VDDPST will need to be VDDPST (POC), which is the pad PVDD2POC instead of PVDD2DGZ, so ensure that this is accounted for in **DigitalCorePads**. POC stands for "power-on control," and is needed to monitor the power-on sequence.

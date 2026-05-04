@@ -11,13 +11,13 @@
           "mainDocId": "intro",
           "docs": [
             {
-              "id": "bond-pad-level/manage-docs-versions",
-              "path": "/backend-flow/docs/bond-pad-level/manage-docs-versions",
+              "id": "bond-pad-level/cadence-setup",
+              "path": "/backend-flow/docs/bond-pad-level/cadence-setup",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "bond-pad-level/translate-your-site",
-              "path": "/backend-flow/docs/bond-pad-level/translate-your-site",
+              "id": "bond-pad-level/chip-level-assembly",
+              "path": "/backend-flow/docs/bond-pad-level/chip-level-assembly",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -26,28 +26,18 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "io-level/create-a-blog-post",
-              "path": "/backend-flow/docs/io-level/create-a-blog-post",
+              "id": "io-level/apr",
+              "path": "/backend-flow/docs/io-level/apr",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "io-level/create-a-document",
-              "path": "/backend-flow/docs/io-level/create-a-document",
+              "id": "io-level/pad-level-module",
+              "path": "/backend-flow/docs/io-level/pad-level-module",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "io-level/create-a-page",
-              "path": "/backend-flow/docs/io-level/create-a-page",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "io-level/deploy-your-site",
-              "path": "/backend-flow/docs/io-level/deploy-your-site",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "io-level/markdown-features",
-              "path": "/backend-flow/docs/io-level/markdown-features",
+              "id": "io-level/syn",
+              "path": "/backend-flow/docs/io-level/syn",
               "sidebar": "tutorialSidebar"
             },
             {

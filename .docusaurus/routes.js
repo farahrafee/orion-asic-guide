@@ -3,6 +3,41 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
+    path: '/backend-flow/__docusaurus/debug',
+    component: ComponentCreator('/backend-flow/__docusaurus/debug', 'b49'),
+    exact: true
+  },
+  {
+    path: '/backend-flow/__docusaurus/debug/config',
+    component: ComponentCreator('/backend-flow/__docusaurus/debug/config', '716'),
+    exact: true
+  },
+  {
+    path: '/backend-flow/__docusaurus/debug/content',
+    component: ComponentCreator('/backend-flow/__docusaurus/debug/content', '855'),
+    exact: true
+  },
+  {
+    path: '/backend-flow/__docusaurus/debug/globalData',
+    component: ComponentCreator('/backend-flow/__docusaurus/debug/globalData', '308'),
+    exact: true
+  },
+  {
+    path: '/backend-flow/__docusaurus/debug/metadata',
+    component: ComponentCreator('/backend-flow/__docusaurus/debug/metadata', 'b3f'),
+    exact: true
+  },
+  {
+    path: '/backend-flow/__docusaurus/debug/registry',
+    component: ComponentCreator('/backend-flow/__docusaurus/debug/registry', '350'),
+    exact: true
+  },
+  {
+    path: '/backend-flow/__docusaurus/debug/routes',
+    component: ComponentCreator('/backend-flow/__docusaurus/debug/routes', '31f'),
+    exact: true
+  },
+  {
     path: '/backend-flow/blog',
     component: ComponentCreator('/backend-flow/blog', '60b'),
     exact: true
@@ -79,25 +114,25 @@ export default [
   },
   {
     path: '/backend-flow/docs',
-    component: ComponentCreator('/backend-flow/docs', '698'),
+    component: ComponentCreator('/backend-flow/docs', 'f04'),
     routes: [
       {
         path: '/backend-flow/docs',
-        component: ComponentCreator('/backend-flow/docs', 'aa9'),
+        component: ComponentCreator('/backend-flow/docs', 'c79'),
         routes: [
           {
             path: '/backend-flow/docs',
-            component: ComponentCreator('/backend-flow/docs', 'd7b'),
+            component: ComponentCreator('/backend-flow/docs', '41d'),
             routes: [
               {
-                path: '/backend-flow/docs/bond-pad-level/manage-docs-versions',
-                component: ComponentCreator('/backend-flow/docs/bond-pad-level/manage-docs-versions', '9c6'),
+                path: '/backend-flow/docs/bond-pad-level/cadence-setup',
+                component: ComponentCreator('/backend-flow/docs/bond-pad-level/cadence-setup', 'dbf'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/backend-flow/docs/bond-pad-level/translate-your-site',
-                component: ComponentCreator('/backend-flow/docs/bond-pad-level/translate-your-site', 'f51'),
+                path: '/backend-flow/docs/bond-pad-level/chip-level-assembly',
+                component: ComponentCreator('/backend-flow/docs/bond-pad-level/chip-level-assembly', '538'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
@@ -120,32 +155,20 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/backend-flow/docs/io-level/create-a-blog-post',
-                component: ComponentCreator('/backend-flow/docs/io-level/create-a-blog-post', '7a6'),
+                path: '/backend-flow/docs/io-level/apr',
+                component: ComponentCreator('/backend-flow/docs/io-level/apr', '180'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/backend-flow/docs/io-level/create-a-document',
-                component: ComponentCreator('/backend-flow/docs/io-level/create-a-document', '1c5'),
+                path: '/backend-flow/docs/io-level/pad-level-module',
+                component: ComponentCreator('/backend-flow/docs/io-level/pad-level-module', 'b39'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/backend-flow/docs/io-level/create-a-page',
-                component: ComponentCreator('/backend-flow/docs/io-level/create-a-page', 'e10'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/backend-flow/docs/io-level/deploy-your-site',
-                component: ComponentCreator('/backend-flow/docs/io-level/deploy-your-site', '7c4'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/backend-flow/docs/io-level/markdown-features',
-                component: ComponentCreator('/backend-flow/docs/io-level/markdown-features', 'a87'),
+                path: '/backend-flow/docs/io-level/syn',
+                component: ComponentCreator('/backend-flow/docs/io-level/syn', 'b46'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               }
