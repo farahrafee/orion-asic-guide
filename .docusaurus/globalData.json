@@ -41,6 +41,36 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "tapeout-level-final/drc",
+              "path": "/backend-flow/docs/tapeout-level-final/drc",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tapeout-level-final/dummy-filler",
+              "path": "/backend-flow/docs/tapeout-level-final/dummy-filler",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tapeout-level-final/gds-export",
+              "path": "/backend-flow/docs/tapeout-level-final/gds-export",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tapeout-level-initial/lvs",
+              "path": "/backend-flow/docs/tapeout-level-initial/lvs",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tapeout-level-initial/seal-ring-assembly",
+              "path": "/backend-flow/docs/tapeout-level-initial/seal-ring-assembly",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tapeout-level-initial/v2lvs",
+              "path": "/backend-flow/docs/tapeout-level-initial/v2lvs",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "/category/io-level",
               "path": "/backend-flow/docs/category/io-level",
               "sidebar": "tutorialSidebar"
@@ -48,6 +78,16 @@
             {
               "id": "/category/bond-pad-level",
               "path": "/backend-flow/docs/category/bond-pad-level",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/tapeout-level-initial",
+              "path": "/backend-flow/docs/category/tapeout-level-initial",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/tapeout-level-final",
+              "path": "/backend-flow/docs/category/tapeout-level-final",
               "sidebar": "tutorialSidebar"
             }
           ],

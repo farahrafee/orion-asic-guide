@@ -1,7 +1,7 @@
 {
   "id": "bond-pad-level/chip-level-assembly",
   "title": "Chip-level assembly",
-  "description": "In the Library Manager, select the library you created and navigate to File -> New -> Cell View. Name the cell ASIC_ALL, and select the view to be \"layout.\" The Virtuoso Layout Suite will open.",
+  "description": "Create bond-pad level layout",
   "source": "@site/docs/bond-pad-level/chip-level-assembly.mdx",
   "sourceDirName": "bond-pad-level",
   "slug": "/bond-pad-level/chip-level-assembly",
@@ -19,5 +19,9 @@
   "previous": {
     "title": "Cadence setup",
     "permalink": "/backend-flow/docs/bond-pad-level/cadence-setup"
+  },
+  "next": {
+    "title": "Tapeout Level (Initial)",
+    "permalink": "/backend-flow/docs/category/tapeout-level-initial"
   }
 }

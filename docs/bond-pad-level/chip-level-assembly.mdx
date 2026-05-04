@@ -4,13 +4,26 @@ sidebar_position: 2
 
 # Chip-level assembly
 
-In the Library Manager, select the library you created and navigate to **File** -> **New** -> **Cell View**. Name the cell **ASIC_ALL**, and select the view to be "layout." The Virtuoso Layout Suite will open.
+## Create bond-pad level layout
 
-Navigate to **Create** -> **Instance** (or click **i** on your keyboard) to create an instance of a cell. For cell, select **DigitalCorePads**, and for view, select "layout." Line up the bottom left corner with the origin for now.
+In the Library Manager, select the library you created and navigate to **File &rarr; New &rarr; Cell View**. Name the cell **ASIC_ALL**, and select the view to be "layout." The Virtuoso Layout Suite will open.
 
-Now, we want to add the bond-pads. Create another instance of a cell, but select **PAD60GU** and check the box for "Create as mosaic." For "rows/columns," type the number corresponding to the number of pads on that edge, and for 
-"delta y/x," type the number of the spacing for that edge using the corresponding number that was printed to the terminal earlier when generating the .tcl script for APR. Rotate it so that the wider side points to the outside of the chip and line up the narrow side with the pads. Repeat for all four edges.
+Navigate to **Create &rarr; Instance** (or click *i* on your keyboard) to create an instance of a cell. For cell, select **DigitalCorePads**, and for view, select "layout." Line up the bottom left corner with the origin.
 
-Now, we want to add the labels. Navigate to **Create** -> **Label** (or click **l** on your keyboard) to create a label. Name it accordingly, select the AP pin layer, and increase the font height. Place it over the bond-pad. A dialog will appear, prompting you to "choose object for label creation." Select "PAD60GU (mosaic)." Repeat for all pads.
+## Create bond pads
+
+Now, we want to add the bond pads. Create another instance of a cell, but select **PAD60GU** and check the box for "Create as mosaic." For "rows/columns," type the number of pads on that edge, and for "delta y/x," type the spacing for that edge using the number that was printed to the terminal earlier when generating the TCL script for APR. Rotate it so that the wider side points to the outside of the chip and line up the narrow side with the pads. Repeat for all four edges.
+
+The following image shows the bond pads for the south edge:
+
+{/* [South Bond Pads](./img/south-bond-pads.png) */}
+
+## Create bond pad labels
+
+Now, we want to add the labels. Navigate to **Create &rarr; Label** (or click *l* on your keyboard) to create a label. Name it accordingly, select the AP pin layer, and increase the font height. The naming convention should match that of the TCL script generated for APR. Place it over the bond-pad. A dialog will appear, prompting you to "choose object for label creation." Select "PAD60GU (mosaic)." Repeat for all pads.
+
+The following image shows the bond pad label for one bond pad:
+
+{/* [Bond Pad Label](./img/bond-pad-label.png) */}
 
 You will also need to create a pin for the POC pad in the **ASIC_ALL** layout to pass LVS. Navigate to the PVDD2POC pad and zoom in on the rings towards the inside of the I/O pads. You will find metal on the M3 layer labeled with POC. Create a label, and name it "POC", select the M3 pin layer, and decrease the font height if needed. Place it over the POC metal.

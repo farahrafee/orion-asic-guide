@@ -1,7 +1,7 @@
 {
   "id": "io-level/pad-level-module",
   "title": "Pad-level module",
-  "description": "Create a module called DigitalCorePads that instantiates the \"logical\" top-level (DigitalCore), as well as the I/O pads. You will also need a dummy holder for PCORNER that can be included in the RTL folder of DigitalcorePads.",
+  "description": "Create a module called DigitalCorePads that instantiates the \"logical\" top-level (DigitalCore), as well as the I/O pads. You will also need a dummy holder for PCORNER that can be included in the RTL folder of DigitalCorePads. Look at previous code for reference.",
   "source": "@site/docs/io-level/pad-level-module.mdx",
   "sourceDirName": "io-level",
   "slug": "/io-level/pad-level-module",

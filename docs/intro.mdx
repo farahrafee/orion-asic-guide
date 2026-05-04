@@ -2,6 +2,14 @@
 sidebar_position: 1
 ---
 
+# Introduction
+
+This tutorial will follow the backend flow for the ERASICv1. Before starting, three directories should be set up:
+
+1. Top module (ER_ASIC_Rev1)
+2. 65 nm PDK
+3. TSMC 65 nm I/O
+
 ## Top module (ER_ASIC_Rev1)
 
 The directory **ER_ASIC_Rev1** should contain the following directories:
@@ -9,13 +17,15 @@ The directory **ER_ASIC_Rev1** should contain the following directories:
 - **CAPTBLS**: Contains 3 .captbl files (worst, typical, and best), which are needed for APR (mmmc.tcl)
 - **LOCAL_LIBS**: Contains technology .lef files
 - **MODULES**: Contains modules, each with their own directories for RTL, SYN, and APR
+	- **DigitalCore**: Top-level module
+	- **DigitalCorePads**: Pad-level module
 - **PADS**: Contains the pads from TSMC
 - **PY_SCRIPTS**: Contains python scripts, including for pin/pad generation
 - **TCL_SCRIPTS**: Contains common .tcl scripts for SYN and APR
 
-The top-level module, **DigitalCore**, and the pad-level module, **DigitalCorePads**, are located in the **MODULES** directory.
-
 ## 65 nm PDK
+
+The process design kit (PDK) is a set of files provided by the foundry, TSMC, that contains models, rules, and data representing a specific manufacturing progress. This PDK can be used to design, simulate, and verify integrated circuits before sending them to the foundry for manufacturing.
 
 The directory called **65NM_PDK_ZIP** contains the PDK. In this project, we are interested in:
 
@@ -33,24 +43,30 @@ The directory called **65NM_PDK_ZIP** contains the PDK. In this project, we are 
 
 ## TSMC 65 nm I/O
 
-The directory called **TSMC_65nm_IO** contains several design kits (library views) that are named using the format NAME_NUMBER_KIT.tar.gz. Each part refers to:
+### Standard I/O Library
 
-- **NAME**: The name of the library/IP
-- **NUMBER**: The version number
-- **KIT**: The design kit initials
+The directory called **TSMC_65nm_IO** contains several design kits (library views) that are named using the format `<NAME>_<NUMBER>_<KIT>.tar.gz`. Each part refers to:
 
-We want to select the desired design kits and move them into a directory called **PADS** for ease of use. For the library/IP, we are interested in tpfn. For the version number, we are primarily interested in 200b and 200c.
+| Name | Description | Example |
+| :---: | :---: | :---: |
+| **NAME** | The name of the library/IP | tpfn |
+| **NUMBER** | The version number | 200b, 200c |
+| **KIT** | The design kit initials | doc, gds, lef, nldm, spi, vlg |
 
-Navigate to `TSMC_65nm_IO/IO/tpfn65gpgv2od3_200d`. Copy the desired design kits into **PADS**, unzip them, and rename for ease. We are interested in the following files:
+Navigate to `TSMC_65nm_IO/IO/tpfn65gpgv2od3_200d`. Copy the desired design kits into the directory called **PADS**, unzip them, and rename for ease. We are interested in the following files:
 
-- **TSMCHOME_DOC**: `tpfn65gpgv2od3_200b_doc.tar.gz`
-- **TSMCHOME_GDS**: `tpfn65gpgv2od3_200c_gdsu9lm.tar.gz`
-- **TSMCHOME_LEF**: `tpfn65gpgv2od3_200c_sefu9lm.tar.gz`
-- **TSMCHOME_NLDM**: `tpfn65gpgv2od3_200b_nldm.tar.gz`
-- **TSMCHOME_SPI**: `tpfn65gpgv2od3_200b_spi.tar.gz`
-- **TSMCHOME_VLG**: `tpfn65gpgv2od3_140c_vlg.tar.gz`
+| Name | Description | Example |
+| :---: | :---: | :---: |
+| **TSMCHOME_DOC** | Databook | `tpfn65gpgv2od3_200b_doc.tar.gz` |
+| **TSMCHOME_GDS** | GDSII layout views | `tpfn65gpgv2od3_200c_gdsu9lm.tar.gz` |
+| **TSMCHOME_LEF** | | `tpfn65gpgv2od3_200c_sefu9lm.tar.gz` |
+| **TSMCHOME_NLDM** | Non-linear delay model | `tpfn65gpgv2od3_200b_nldm.tar.gz` |
+| **TSMCHOME_SPI** | LVS netlists in CDL format | `tpfn65gpgv2od3_200b_spi.tar.gz` |
+| **TSMCHOME_VLG** | Verilog model | `tpfn65gpgv2od3_140c_vlg.tar.gz` |
 
-Information about these files can be found in `anunistdiogeneral_v2.00.pdf`.
+Information about these files can be found in `anunistdiogeneral_v2.00.pdf`. Note that this directory contains proprietary information belonging to TSMC.
+
+### Standard I/O Pads
 
 The following pads are used in **ER_ASIC_Rev1**:
 
@@ -67,3 +83,23 @@ The following pads are used in **ER_ASIC_Rev1**:
 - **PVDD2POC**: Power-on control power pad for I/O power supply
 
 Information about these files can be found in the **TSMCHOME_DOC** directory.
+
+## Assembly hierarchy
+
+The recommended assembly hierarchy is outlined below:
+
+- ASIC_Tapeout
+	- ASIC_Tapeout_Fill
+	- ASIC_ALL
+		- DigitalCorePads
+		- Pad labels
+	- Seal ring
+
+This hierarchy can be assembled level-by-level:
+
+1. **I/O Level**: The imported pad-level module from Innovus
+2. **Bond-pad level**: I/O level + bond pads
+3. **Tapeout level (initial)**: Bond-pad level + seal ring
+4. **Tapeout level (final)**: Tapeout level (initial) + dummy fill
+
+This documentation is structured according to these levels.

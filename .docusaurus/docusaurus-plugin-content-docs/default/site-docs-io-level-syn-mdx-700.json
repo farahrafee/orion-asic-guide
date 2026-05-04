@@ -1,7 +1,7 @@
 {
   "id": "io-level/syn",
   "title": "Synthesis (SYN)",
-  "description": "If you run synthesis as is, the pads will be optimized away because they have no logic connections. In syn.tcl, you have to do setdonttouch for all of your pads:",
+  "description": "The script that will run synthesis is located at syn/script/syn.tcl. If you run synthesis as is, the pads will be optimized away because they have no logic connections. In syn.tcl, you have to do setdonttouch for all of your pads:",
   "source": "@site/docs/io-level/syn.mdx",
   "sourceDirName": "io-level",
   "slug": "/io-level/syn",

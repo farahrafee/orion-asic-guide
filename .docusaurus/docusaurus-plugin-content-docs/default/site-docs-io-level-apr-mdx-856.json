@@ -1,7 +1,7 @@
 {
   "id": "io-level/apr",
   "title": "Automatic place and route (APR)",
-  "description": "After synthesis, check syn/report/DigitalCorePads.area to find the total cell area. To create a square chip, you will want to calculate the X and Y dimensions as:",
+  "description": "The script that runs APR is located at apr/apr.tcl. You will need to calculate the desired X and Y dimensions of the chip, which are called CoreX and CoreY in apr.tcl.",
   "source": "@site/docs/io-level/apr.mdx",
   "sourceDirName": "io-level",
   "slug": "/io-level/apr",
