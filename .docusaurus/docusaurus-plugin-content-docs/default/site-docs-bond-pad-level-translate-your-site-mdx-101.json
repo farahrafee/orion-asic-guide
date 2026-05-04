@@ -1,0 +1,23 @@
+{
+  "id": "bond-pad-level/translate-your-site",
+  "title": "Assemble chip levels until bond-pad level",
+  "description": "In the Library Manager, select the library you created and navigate to File -> New -> Cell View. Name the cell ASIC_ALL, and select the view to be \"layout.\" The Virtuoso Layout Suite will open.",
+  "source": "@site/docs/bond-pad-level/translate-your-site.mdx",
+  "sourceDirName": "bond-pad-level",
+  "slug": "/bond-pad-level/translate-your-site",
+  "permalink": "/docs/bond-pad-level/translate-your-site",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/bond-pad-level/translate-your-site.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Create a new project library",
+    "permalink": "/docs/bond-pad-level/manage-docs-versions"
+  }
+}

@@ -11,13 +11,18 @@
           "mainDocId": "intro",
           "docs": [
             {
-              "id": "intro",
-              "path": "/docs/intro",
+              "id": "bond-pad-level/manage-docs-versions",
+              "path": "/docs/bond-pad-level/manage-docs-versions",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "io-level/congratulations",
-              "path": "/docs/io-level/congratulations",
+              "id": "bond-pad-level/translate-your-site",
+              "path": "/docs/bond-pad-level/translate-your-site",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/docs/intro",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -43,16 +48,6 @@
             {
               "id": "io-level/markdown-features",
               "path": "/docs/io-level/markdown-features",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "tutorial-extras/manage-docs-versions",
-              "path": "/docs/tutorial-extras/manage-docs-versions",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "tutorial-extras/translate-your-site",
-              "path": "/docs/tutorial-extras/translate-your-site",
               "sidebar": "tutorialSidebar"
             },
             {

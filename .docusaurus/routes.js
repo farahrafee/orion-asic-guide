@@ -114,16 +114,28 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', '0f8'),
+    component: ComponentCreator('/docs', '1c9'),
     routes: [
       {
         path: '/docs',
-        component: ComponentCreator('/docs', '843'),
+        component: ComponentCreator('/docs', 'e21'),
         routes: [
           {
             path: '/docs',
-            component: ComponentCreator('/docs', '3ca'),
+            component: ComponentCreator('/docs', 'de1'),
             routes: [
+              {
+                path: '/docs/bond-pad-level/manage-docs-versions',
+                component: ComponentCreator('/docs/bond-pad-level/manage-docs-versions', '23a'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/bond-pad-level/translate-your-site',
+                component: ComponentCreator('/docs/bond-pad-level/translate-your-site', '224'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
               {
                 path: '/docs/category/bond-pad-level',
                 component: ComponentCreator('/docs/category/bond-pad-level', '823'),
@@ -139,12 +151,6 @@ export default [
               {
                 path: '/docs/intro',
                 component: ComponentCreator('/docs/intro', '89a'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/docs/io-level/congratulations',
-                component: ComponentCreator('/docs/io-level/congratulations', '8d2'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
@@ -175,18 +181,6 @@ export default [
               {
                 path: '/docs/io-level/markdown-features',
                 component: ComponentCreator('/docs/io-level/markdown-features', '893'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/docs/tutorial-extras/manage-docs-versions',
-                component: ComponentCreator('/docs/tutorial-extras/manage-docs-versions', '5a2'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/docs/tutorial-extras/translate-your-site',
-                component: ComponentCreator('/docs/tutorial-extras/translate-your-site', 'd21'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               }
