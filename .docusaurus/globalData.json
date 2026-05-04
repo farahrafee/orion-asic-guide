@@ -1,68 +1,53 @@
 {
   "docusaurus-plugin-content-docs": {
     "default": {
-      "path": "/docs",
+      "path": "/backend-flow/docs",
       "versions": [
         {
           "name": "current",
           "label": "Next",
           "isLast": true,
-          "path": "/docs",
+          "path": "/backend-flow/docs",
           "mainDocId": "intro",
           "docs": [
             {
+              "id": "bond-pad-level/cadence-setup",
+              "path": "/backend-flow/docs/bond-pad-level/cadence-setup",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "bond-pad-level/chip-level-assembly",
+              "path": "/backend-flow/docs/bond-pad-level/chip-level-assembly",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "intro",
-              "path": "/docs/intro",
+              "path": "/backend-flow/docs/intro",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "io-level/congratulations",
-              "path": "/docs/io-level/congratulations",
+              "id": "io-level/apr",
+              "path": "/backend-flow/docs/io-level/apr",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "io-level/create-a-blog-post",
-              "path": "/docs/io-level/create-a-blog-post",
+              "id": "io-level/pad-level-module",
+              "path": "/backend-flow/docs/io-level/pad-level-module",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "io-level/create-a-document",
-              "path": "/docs/io-level/create-a-document",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "io-level/create-a-page",
-              "path": "/docs/io-level/create-a-page",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "io-level/deploy-your-site",
-              "path": "/docs/io-level/deploy-your-site",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "io-level/markdown-features",
-              "path": "/docs/io-level/markdown-features",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "tutorial-extras/manage-docs-versions",
-              "path": "/docs/tutorial-extras/manage-docs-versions",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "tutorial-extras/translate-your-site",
-              "path": "/docs/tutorial-extras/translate-your-site",
+              "id": "io-level/syn",
+              "path": "/backend-flow/docs/io-level/syn",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "/category/io-level",
-              "path": "/docs/category/io-level",
+              "path": "/backend-flow/docs/category/io-level",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "/category/bond-pad-level",
-              "path": "/docs/category/bond-pad-level",
+              "path": "/backend-flow/docs/category/bond-pad-level",
               "sidebar": "tutorialSidebar"
             }
           ],
@@ -70,7 +55,7 @@
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/docs/intro",
+                "path": "/backend-flow/docs/intro",
                 "label": "intro"
               }
             }

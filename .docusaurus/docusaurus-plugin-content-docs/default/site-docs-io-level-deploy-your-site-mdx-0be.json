@@ -5,7 +5,7 @@
   "source": "@site/docs/io-level/deploy-your-site.mdx",
   "sourceDirName": "io-level",
   "slug": "/io-level/deploy-your-site",
-  "permalink": "/docs/io-level/deploy-your-site",
+  "permalink": "/backend-flow/docs/io-level/deploy-your-site",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/io-level/deploy-your-site.mdx",
@@ -18,10 +18,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Markdown Features",
-    "permalink": "/docs/io-level/markdown-features"
+    "permalink": "/backend-flow/docs/io-level/markdown-features"
   },
   "next": {
     "title": "Congratulations!",
-    "permalink": "/docs/io-level/congratulations"
+    "permalink": "/backend-flow/docs/io-level/congratulations"
   }
 }

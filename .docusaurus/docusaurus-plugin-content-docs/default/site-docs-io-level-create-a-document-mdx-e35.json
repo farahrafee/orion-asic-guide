@@ -5,7 +5,7 @@
   "source": "@site/docs/io-level/create-a-document.mdx",
   "sourceDirName": "io-level",
   "slug": "/io-level/create-a-document",
-  "permalink": "/docs/io-level/create-a-document",
+  "permalink": "/backend-flow/docs/io-level/create-a-document",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/io-level/create-a-document.mdx",
@@ -17,11 +17,11 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Generate a pad-level module",
-    "permalink": "/docs/io-level/create-a-page"
+    "title": "Pad-level module",
+    "permalink": "/backend-flow/docs/io-level/pad-level-module"
   },
   "next": {
-    "title": "Automatic place and route (APR)",
-    "permalink": "/docs/io-level/create-a-blog-post"
+    "title": "Synthesis (SYN)",
+    "permalink": "/backend-flow/docs/io-level/syn"
   }
 }
