@@ -249,17 +249,17 @@
     },
     "content": "content---backend-flow-markdown-page-4-c-6-d71"
   },
-  "/backend-flow/docs-77a": {
+  "/backend-flow/docs-21c": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---backend-flow-docsaba-597"
     }
   },
-  "/backend-flow/docs-e71": {
+  "/backend-flow/docs-d63": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---backend-flow-docs-61-a-ee6"
   },
-  "/backend-flow/docs-ac7": {
+  "/backend-flow/docs-d82": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/backend-flow/docs/bond-pad-level/cadence-setup-dbf": {
@@ -313,6 +313,10 @@
   "/backend-flow/docs/tapeout-level-final/gds-export-bfa": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---backend-flow-docs-tapeout-level-final-gds-exportef-8-9af"
+  },
+  "/backend-flow/docs/tapeout-level-final/tapeout-427": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---backend-flow-docs-tapeout-level-final-tapeout-88-b-d90"
   },
   "/backend-flow/docs/tapeout-level-initial/lvs-740": {
     "__comp": "__comp---theme-doc-item-178-a40",

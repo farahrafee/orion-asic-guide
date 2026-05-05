@@ -56,6 +56,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "tapeout-level-final/tapeout",
+              "path": "/backend-flow/docs/tapeout-level-final/tapeout",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "tapeout-level-initial/lvs",
               "path": "/backend-flow/docs/tapeout-level-initial/lvs",
               "sidebar": "tutorialSidebar"

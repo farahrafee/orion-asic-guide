@@ -19,5 +19,9 @@
   "previous": {
     "title": "Design rule check (DRC)",
     "permalink": "/backend-flow/docs/tapeout-level-final/drc"
+  },
+  "next": {
+    "title": "Tapeout",
+    "permalink": "/backend-flow/docs/tapeout-level-final/tapeout"
   }
 }

@@ -114,15 +114,15 @@ export default [
   },
   {
     path: '/backend-flow/docs',
-    component: ComponentCreator('/backend-flow/docs', '77a'),
+    component: ComponentCreator('/backend-flow/docs', '21c'),
     routes: [
       {
         path: '/backend-flow/docs',
-        component: ComponentCreator('/backend-flow/docs', 'e71'),
+        component: ComponentCreator('/backend-flow/docs', 'd63'),
         routes: [
           {
             path: '/backend-flow/docs',
-            component: ComponentCreator('/backend-flow/docs', 'ac7'),
+            component: ComponentCreator('/backend-flow/docs', 'd82'),
             routes: [
               {
                 path: '/backend-flow/docs/bond-pad-level/cadence-setup',
@@ -199,6 +199,12 @@ export default [
               {
                 path: '/backend-flow/docs/tapeout-level-final/gds-export',
                 component: ComponentCreator('/backend-flow/docs/tapeout-level-final/gds-export', 'bfa'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/backend-flow/docs/tapeout-level-final/tapeout',
+                component: ComponentCreator('/backend-flow/docs/tapeout-level-final/tapeout', '427'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },

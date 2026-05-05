@@ -1,0 +1,23 @@
+{
+  "id": "tapeout-level-final/tapeout",
+  "title": "Tapeout",
+  "description": "To submit your design, you need to fill out a Tapeout Spreadsheet that was provided by MUSE. There are six sheets provided:",
+  "source": "@site/docs/tapeout-level-final/tapeout.mdx",
+  "sourceDirName": "tapeout-level-final",
+  "slug": "/tapeout-level-final/tapeout",
+  "permalink": "/backend-flow/docs/tapeout-level-final/tapeout",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/tapeout-level-final/tapeout.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "GDS export",
+    "permalink": "/backend-flow/docs/tapeout-level-final/gds-export"
+  }
+}

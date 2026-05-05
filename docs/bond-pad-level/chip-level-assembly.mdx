@@ -12,11 +12,16 @@ Navigate to **Create &rarr; Instance** (or click *i* on your keyboard) to create
 
 ## Create bond pads
 
-Now, we want to add the bond pads. Create another instance of a cell, but select **PAD60GU** and check the box for "Create as mosaic." For "rows/columns," type the number of pads on that edge, and for "delta y/x," type the spacing for that edge using the number that was printed to the terminal earlier when generating the TCL script for APR. Rotate it so that the wider side points to the outside of the chip and line up the narrow side with the pads. Repeat for all four edges.
+Now, we want to add the bond pads. The bond pad option we will use is circuit under pad (CUP) I/O, which is the I/O with the bond pad over the I/O body itself. The pad pin is located closer to the center of the chip and should be connected to the I/O pin. The following image shows **PAD60GU**, one of the bond pads included in the standard cell library:
 
-The following image shows the bond pads for the south edge:
+<div style={{textAlign: 'center'}}>
 
-{/* [South Bond Pads](./img/south-bond-pads.png) */}
+![Bond Pad](/img/bond-pad.png)
+
+</div>
+
+The pad pin, which is at the top of the previous photo, will need to oriented closer to the center of the chip and will be aligned with the I/O pins in the linear bond style. Create another instance of a cell, but select **PAD60GU** and check the box for "Create as mosaic." For "rows/columns," type the number of pads on that edge, and for "delta y/x," type the spacing for that edge using the number that was printed to the terminal earlier when generating the TCL script for APR. Rotate and align it accordingly.
+
 
 ## Create bond pad labels
 
@@ -24,6 +29,31 @@ Now, we want to add the labels. Navigate to **Create &rarr; Label** (or click *l
 
 The following image shows the bond pad label for one bond pad:
 
-{/* [Bond Pad Label](./img/bond-pad-label.png) */}
+<div style={{textAlign: 'center'}}>
 
-You will also need to create a pin for the POC pad in the **ASIC_ALL** layout to pass LVS. Navigate to the PVDD2POC pad and zoom in on the rings towards the inside of the I/O pads. You will find metal on the M3 layer labeled with POC. Create a label, and name it "POC", select the M3 pin layer, and decrease the font height if needed. Place it over the POC metal.
+![Bond Pad Label](/img/bond-pad-label.png)
+
+</div>
+
+## Create POC pin
+
+You will also need to create a pin for the POC pad in the **ASIC_ALL** layout to pass LVS. Navigate to the PVDD2POC pad and zoom in on the rings towards the inside of the I/O pads. You will find the POC rail on the M3 layer labeled with POC. Create a label, and name it "POC", select the M3 pin layer, and decrease the font height if needed. Place it over the POC metal. The following image shows the placement of the POC pin label:
+
+<div style={{textAlign: 'center'}}>
+
+![POC Label](/img/poc-label.png)
+
+</div>
+
+## Final result (ASIC_ALL)
+
+
+The following image shows the final result of ASIC_ALL for the ERASICv1, which includes DigitalCorePads, the bond pads, and the bond pad labels:
+
+<div style={{textAlign: 'center'}}>
+
+![ASIC_ALL](/img/asic-all.png)
+
+</div>
+
+Layers M7, M8, and M9 are hidden for aesthetic purposes.
