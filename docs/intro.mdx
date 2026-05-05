@@ -68,12 +68,15 @@ Information about these files can be found in `anunistdiogeneral_v2.00.pdf`. Not
 
 ### Standard I/O Pads
 
-The following pads are used in **ER_ASIC_Rev1**:
+The following power and ground pads are commonly used in chip design:
 
 - **PVDD2DGZ**: Power pad for I/O power supply
 - **PVDD1DGZ**: Power pad for core power supply
 - **PVSS2DGZ**: Ground pad for I/O ground supply
 - **PVSS1DGZ**: Ground pad for core ground supply
+
+Additionally, the following pads are used in the ERASICv1:
+
 - **PDIDGZ**: Input pad
 - **PDUDGZ**: Input pad with pull-up
 - **PDO24CDG**: Output pad
@@ -89,17 +92,17 @@ Information about these files can be found in the **TSMCHOME_DOC** directory.
 The recommended assembly hierarchy is outlined below:
 
 - ASIC_Tapeout
-	- ASIC_Tapeout_Fill
 	- ASIC_ALL
 		- DigitalCorePads
 		- Pad labels
 	- Seal ring
+	- Dummy fill
 
 This hierarchy can be assembled level-by-level:
 
 1. **I/O Level**: The imported pad-level module from Innovus
-2. **Bond-pad level**: I/O level + bond pads
-3. **Tapeout level (initial)**: Bond-pad level + seal ring
-4. **Tapeout level (final)**: Tapeout level (initial) + dummy fill
+2. **Bond-Pad Level**: I/O level + bond pads
+3. **Tapeout Level (Initial)**: Bond-pad level + seal ring
+4. **Tapeout Level (Final)**: Tapeout level (initial) + dummy fill
 
-This documentation is structured according to these levels.
+This tutorial is structured according to these levels.

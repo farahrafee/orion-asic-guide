@@ -10,22 +10,33 @@ You will need to indicate how many pads you want for DVDD (VDDPST), DVSS (VSSPST
 
 Additionally, there should only be one input port for each I/O VDDPST and VSSPST so that one unified power net connects to all VDDPST/VDDPST pins across all pad instances. The core VDD and VSS can just be global nets.
 
-The following table shows the external I/O of the ERASICv1 with 32 pins:
+The following table shows the external I/O of the ERASICv1:
 
-| Amount | Name | Direction | Pad |
-| :---: | :---: | :---: | :---: |
-1 | I_CLK | I | PDIDGZ |
-1 | I_RST | I | PDUDGZ |
-6 | VDDPST | I | PVDD2DGZ, PVDD2POC |
-0 | VSSPST | I | PVSS2DGZ |
-4 | VDD | I | PVDD1DGZ |
-0 | VSS | I | PVSS1DGZ |
-4 | IO_CSPI_DATA | I/O | PDB24DGZ |
-1 | I_CSPI_CLK | I | PDIDGZ |
-1 | I_CSPI_CSN | I | PDIDGZ |
-1 | IO_CSPI_CTRL | I/O | PDU24DGZ |
-4 | IO_DSPI_DATA | I/O | PDB24DGZ |
-1 | O_DSPI_CLK | O | PDO24CDG |
-1 | O_DSPI_CSN | O | PDO24CDG |
-1 | IO_DSPI_CTRL | I/O | PDU24DGZ |
-6 | O_DEBUG | O | PDO24CDG |
+Amount | Name | Direction | Pad
+:---: | :---: | :---: | :---:
+1 | I_CLK | I | PDIDGZ
+1 | I_RST | I | PDUDGZ
+6 | VDDPST | I | PVDD2DGZ, PVDD2POC
+0 | VSSPST | I | PVSS2DGZ
+4 | VDD | I | PVDD1DGZ
+0 | VSS | I | PVSS1DGZ
+4 | IO_CSPI_DATA | I/O | PDB24DGZ
+1 | I_CSPI_CLK | I | PDIDGZ
+1 | I_CSPI_CSN | I | PDIDGZ
+1 | IO_CSPI_CTRL | I/O | PDU24DGZ
+4 | IO_DSPI_DATA | I/O | PDB24DGZ
+1 | O_DSPI_CLK | O | PDO24CDG
+1 | O_DSPI_CSN | O | PDO24CDG
+1 | IO_DSPI_CTRL | I/O | PDU24DGZ
+6 | O_DEBUG | O | PDO24CDG
+
+This totals to 32 pins. Pins are not necessary for VSS and VSSPST, but 7 VSS pads and 10 VSSPST pads were added, totalling to 49 pads. The following image shows the pin diagram on the left and the pad diagram on the right:
+
+<div style={{textAlign: 'center'}}>
+
+![Pin and Pad Diagram](/img/pin-pad-diagram.png)
+
+</div>
+
+The north edge has 13 pads while the east, south, and west edges have 12 pads. This allows TSMC to easily distinguish the orientation of the chip.
+
