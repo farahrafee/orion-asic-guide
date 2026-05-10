@@ -1,11 +1,11 @@
 # Backend Flow Docs
 
-Documentation site live at: https://farahrafee.github.io/backend-flow
+Documentation site live at: https://farahrafee.github.io/orion-asic-guide
 
 ## Setup
 Clone the repo and install dependencies:
-	git clone https://github.com/farahrafee/backend-flow.git
-	cd backend-flow
+	git clone https://github.com/farahrafee/orion-asic-guide.git
+	cd orion-asic-guide
 	npm install
 
 ## Commands
