@@ -1,0 +1,27 @@
+{
+  "id": "backend-flow/bond-pad-level/cadence-setup",
+  "title": "Cadence setup",
+  "description": "Create a new project library",
+  "source": "@site/docs/backend-flow/bond-pad-level/cadence-setup.mdx",
+  "sourceDirName": "backend-flow/bond-pad-level",
+  "slug": "/backend-flow/bond-pad-level/cadence-setup",
+  "permalink": "/backend-flow/docs/backend-flow/bond-pad-level/cadence-setup",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/farahrafee/backend-flow/docs/backend-flow/bond-pad-level/cadence-setup.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "backendSidebar",
+  "previous": {
+    "title": "Bond-Pad Level",
+    "permalink": "/backend-flow/docs/category/bond-pad-level"
+  },
+  "next": {
+    "title": "Chip-level assembly",
+    "permalink": "/backend-flow/docs/backend-flow/bond-pad-level/chip-level-assembly"
+  }
+}

@@ -4,9 +4,8 @@
  * Modify the docusaurus.config.js file at your site's root instead.
  */
 export default {
-  "title": "Backend Flow",
-  "tagline": "Farah Mohammed Rafee",
-  "favicon": "img/favicon.ico",
+  "title": "Digital ASIC Design Guide",
+  "favicon": "img/orion-logo.png",
   "url": "https://farahrafee.github.io",
   "baseUrl": "/backend-flow/",
   "organizationName": "farahrafee",
@@ -26,21 +25,7 @@ export default {
       {
         "docs": {
           "sidebarPath": "./sidebars.js",
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
-        },
-        "blog": {
-          "showReadingTime": true,
-          "feedOptions": {
-            "type": [
-              "rss",
-              "atom"
-            ],
-            "xslt": true
-          },
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-          "onInlineTags": "warn",
-          "onInlineAuthors": "warn",
-          "onUntruncatedBlogPosts": "warn"
+          "editUrl": "https://github.com/farahrafee/backend-flow/"
         },
         "theme": {
           "customCss": "./src/css/custom.css"
@@ -49,82 +34,38 @@ export default {
     ]
   ],
   "themeConfig": {
-    "image": "img/docusaurus-social-card.jpg",
+    "image": "img/orion-logo.png",
     "colorMode": {
       "respectPrefersColorScheme": true,
       "defaultMode": "light",
       "disableSwitch": false
     },
     "navbar": {
-      "title": "My Site",
+      "title": "Digital ASIC Design Guide",
       "logo": {
-        "alt": "My Site Logo",
-        "src": "img/logo.svg"
+        "alt": "Orion Logo",
+        "src": "img/orion-logo.png"
       },
       "items": [
         {
           "type": "docSidebar",
-          "sidebarId": "tutorialSidebar",
+          "sidebarId": "frontendSidebar",
           "position": "left",
-          "label": "Tutorial"
+          "label": "Front-End Flow"
         },
         {
-          "to": "/blog",
-          "label": "Blog",
-          "position": "left"
-        },
-        {
-          "href": "https://github.com/facebook/docusaurus",
-          "label": "GitHub",
-          "position": "right"
+          "type": "docSidebar",
+          "sidebarId": "backendSidebar",
+          "position": "left",
+          "label": "Back-End Flow"
         }
       ],
       "hideOnScroll": false
     },
     "footer": {
       "style": "dark",
-      "links": [
-        {
-          "title": "Docs",
-          "items": [
-            {
-              "label": "Tutorial",
-              "to": "/docs/intro"
-            }
-          ]
-        },
-        {
-          "title": "Community",
-          "items": [
-            {
-              "label": "Stack Overflow",
-              "href": "https://stackoverflow.com/questions/tagged/docusaurus"
-            },
-            {
-              "label": "Discord",
-              "href": "https://discordapp.com/invite/docusaurus"
-            },
-            {
-              "label": "X",
-              "href": "https://x.com/docusaurus"
-            }
-          ]
-        },
-        {
-          "title": "More",
-          "items": [
-            {
-              "label": "Blog",
-              "to": "/blog"
-            },
-            {
-              "label": "GitHub",
-              "href": "https://github.com/facebook/docusaurus"
-            }
-          ]
-        }
-      ],
-      "copyright": "Copyright © 2026 My Project, Inc. Built with Docusaurus."
+      "copyright": "Copyright © 2026 Orion Radiation Measurement Group. Built with Docusaurus.",
+      "links": []
     },
     "prism": {
       "theme": {
@@ -387,6 +328,7 @@ export default {
   "headTags": [],
   "stylesheets": [],
   "clientModules": [],
+  "tagline": "",
   "titleDelimiter": "|",
   "noIndex": false,
   "markdown": {

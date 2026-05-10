@@ -1,0 +1,27 @@
+{
+  "id": "backend-flow/tapeout-level-initial/v2lvs",
+  "title": "Verilog-to-LVS (V2LVS)",
+  "description": "Generate the CDL for DigitalCorePads",
+  "source": "@site/docs/backend-flow/tapeout-level-initial/v2lvs.mdx",
+  "sourceDirName": "backend-flow/tapeout-level-initial",
+  "slug": "/backend-flow/tapeout-level-initial/v2lvs",
+  "permalink": "/backend-flow/docs/backend-flow/tapeout-level-initial/v2lvs",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/farahrafee/backend-flow/docs/backend-flow/tapeout-level-initial/v2lvs.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "backendSidebar",
+  "previous": {
+    "title": "Tapeout Level (Initial)",
+    "permalink": "/backend-flow/docs/category/tapeout-level-initial"
+  },
+  "next": {
+    "title": "Layout vs. schematic (LVS)",
+    "permalink": "/backend-flow/docs/backend-flow/tapeout-level-initial/lvs"
+  }
+}

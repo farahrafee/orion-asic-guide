@@ -1,0 +1,27 @@
+{
+  "id": "backend-flow/tapeout-level-final/drc",
+  "title": "Design rule check (DRC)",
+  "description": "Locate the following files and copy them into ~/ERASICRev1/APR for ease of use:",
+  "source": "@site/docs/backend-flow/tapeout-level-final/drc.mdx",
+  "sourceDirName": "backend-flow/tapeout-level-final",
+  "slug": "/backend-flow/tapeout-level-final/drc",
+  "permalink": "/backend-flow/docs/backend-flow/tapeout-level-final/drc",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/farahrafee/backend-flow/docs/backend-flow/tapeout-level-final/drc.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "backendSidebar",
+  "previous": {
+    "title": "Dummy filler",
+    "permalink": "/backend-flow/docs/backend-flow/tapeout-level-final/dummy-filler"
+  },
+  "next": {
+    "title": "GDS export",
+    "permalink": "/backend-flow/docs/backend-flow/tapeout-level-final/gds-export"
+  }
+}

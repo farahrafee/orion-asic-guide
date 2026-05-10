@@ -1,0 +1,27 @@
+{
+  "id": "backend-flow/tapeout-level-initial/lvs",
+  "title": "Layout vs. schematic (LVS)",
+  "description": "We want to run LVS with Calibre on the bond-pad level (so no seal ring or dummy fill). Pin labels must be added to the AP level of each pad so that the LVS tool can map the Spice netlist to the layout. They must follow the same naming as ASIC_ALL.sv.",
+  "source": "@site/docs/backend-flow/tapeout-level-initial/lvs.mdx",
+  "sourceDirName": "backend-flow/tapeout-level-initial",
+  "slug": "/backend-flow/tapeout-level-initial/lvs",
+  "permalink": "/backend-flow/docs/backend-flow/tapeout-level-initial/lvs",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/farahrafee/backend-flow/docs/backend-flow/tapeout-level-initial/lvs.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "backendSidebar",
+  "previous": {
+    "title": "Verilog-to-LVS (V2LVS)",
+    "permalink": "/backend-flow/docs/backend-flow/tapeout-level-initial/v2lvs"
+  },
+  "next": {
+    "title": "Seal ring assembly",
+    "permalink": "/backend-flow/docs/backend-flow/tapeout-level-initial/seal-ring-assembly"
+  }
+}

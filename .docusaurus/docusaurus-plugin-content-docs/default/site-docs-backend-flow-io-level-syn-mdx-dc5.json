@@ -1,0 +1,27 @@
+{
+  "id": "backend-flow/io-level/syn",
+  "title": "Synthesis (SYN)",
+  "description": "The script that will run synthesis is located at syn/script/syn.tcl. If you run synthesis as is, the pads will be optimized away because they have no logic connections. In syn.tcl, you have to do setdonttouch for all of your pads:",
+  "source": "@site/docs/backend-flow/io-level/syn.mdx",
+  "sourceDirName": "backend-flow/io-level",
+  "slug": "/backend-flow/io-level/syn",
+  "permalink": "/backend-flow/docs/backend-flow/io-level/syn",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/farahrafee/backend-flow/docs/backend-flow/io-level/syn.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "backendSidebar",
+  "previous": {
+    "title": "Pad-level module",
+    "permalink": "/backend-flow/docs/backend-flow/io-level/pad-level-module"
+  },
+  "next": {
+    "title": "Automatic place and route (APR)",
+    "permalink": "/backend-flow/docs/backend-flow/io-level/apr"
+  }
+}

@@ -1,0 +1,110 @@
+---
+sidebar_position: 1
+---
+
+# Introduction
+
+This tutorial will follow the back-end flow for the ERASICv1. Before starting, three directories should be set up:
+
+1. Top module (ER_ASIC_Rev1)
+2. 65 nm PDK
+3. TSMC 65 nm I/O
+
+## Top module (ER_ASIC_Rev1)
+
+The directory **ER_ASIC_Rev1** should contain the following directories:
+
+- **CAPTBLS**: Contains 3 .captbl files (worst, typical, and best), which are needed for APR (mmmc.tcl)
+- **LOCAL_LIBS**: Contains technology .lef files
+- **MODULES**: Contains modules, each with their own directories for RTL, SYN, and APR
+	- **DigitalCore**: Top-level module
+	- **DigitalCorePads**: Pad-level module
+- **PADS**: Contains the pads from TSMC
+- **PY_SCRIPTS**: Contains python scripts, including for pin/pad generation
+- **TCL_SCRIPTS**: Contains common .tcl scripts for SYN and APR
+
+## 65 nm PDK
+
+The process design kit (PDK) is a set of files provided by the foundry, TSMC, that contains models, rules, and data representing a specific manufacturing progress. This PDK can be used to design, simulate, and verify integrated circuits before sending them to the foundry for manufacturing.
+
+The directory called **65NM_PDK_ZIP** contains the PDK. In this project, we are interested in:
+
+- **Technology**: 65 nm
+- **Flavor**: MS RF GP
+   - **MS**: mixed-signal
+   - **RF**: radio frequency
+   - **GP**: general purpose
+- **Metal**: 1p9m_6X1Z1U
+   - **1p**: 1 polysilicon layer
+   - **9m**: 9 total metal layers
+   - **6X**: 6 standard metal layers
+   - **1Z**: 1 thick metal layer
+   - **1U**: 1 ultra-thick metal layer
+
+## TSMC 65 nm I/O
+
+### Standard I/O Library
+
+The directory called **TSMC_65nm_IO** contains several design kits (library views) that are named using the format `<NAME>_<NUMBER>_<KIT>.tar.gz`. Each part refers to:
+
+| Name | Description | Example |
+| :---: | :---: | :---: |
+| **NAME** | The name of the library/IP | tpfn |
+| **NUMBER** | The version number | 200b, 200c |
+| **KIT** | The design kit initials | doc, gds, lef, nldm, spi, vlg |
+
+Navigate to `TSMC_65nm_IO/IO/tpfn65gpgv2od3_200d`. Copy the desired design kits into the directory called **PADS**, unzip them, and rename for ease. We are interested in the following files:
+
+| Name | Description | Example |
+| :---: | --- | :---: |
+| **TSMCHOME_DOC** | <ul><li>Documentation</li></ul> | `tpfn65gpgv2od3_200b_doc.tar.gz` |
+| **TSMCHOME_GDS** | <ul><li>Graphic database system</li><li>Contains the physical layout format</li></ul> | `tpfn65gpgv2od3_200c_gdsu9lm.tar.gz` |
+| **TSMCHOME_LEF** | <ul><li>Library exchange format</li><li>Provides an abstract view of cells for APR</li></ul> | `tpfn65gpgv2od3_200c_sefu9lm.tar.gz` |
+| **TSMCHOME_NLDM** | <ul><li>Non-linear delay model</li><li>Describes cell timing, power consumption, and noise</li></ul> | `tpfn65gpgv2od3_200b_nldm.tar.gz` |
+| **TSMCHOME_SPI** | <ul><li>Simulation program with integrated circuit emphasis</li><li>Describes transistors, resistors, capacitors, etc. in a circuit netlist format</li></ul> | `tpfn65gpgv2od3_200b_spi.tar.gz` |
+| **TSMCHOME_VLG** | <ul><li>Verilog</li><li>Represents behavioral models in Verilog</li></ul> | `tpfn65gpgv2od3_140c_vlg.tar.gz` |
+
+Out of these files, the most important is GDS. You will have to import and export your design to and from Cadence in GDS format as hierarchical cells.
+
+Information about these files can be found in `anunistdiogeneral_v2.00.pdf`. Note that this directory contains proprietary information belonging to TSMC.
+
+### Standard I/O Pads
+
+The following power and ground pads are commonly used in chip design:
+
+- **PVDD2DGZ**: Power pad for I/O power supply
+- **PVDD1DGZ**: Power pad for core power supply
+- **PVSS2DGZ**: Ground pad for I/O ground supply
+- **PVSS1DGZ**: Ground pad for core ground supply
+
+Additionally, the following pads are used in the ERASICv1:
+
+- **PDIDGZ**: Input pad
+- **PDUDGZ**: Input pad with pull-up
+- **PDO24CDG**: Output pad
+- **PCORNER**: Corner cell
+- **PDB24DGZ**: Tri-state output pad with input
+- **PDU24DGZ**: Tri-state output pad with input and pull-up
+- **PVDD2POC**: Power-on control power pad for I/O power supply
+
+Information about these files can be found in the **TSMCHOME_DOC** directory.
+
+## Assembly hierarchy
+
+The recommended assembly hierarchy is outlined below:
+
+- ASIC_Tapeout
+	- ASIC_ALL
+		- DigitalCorePads
+		- Pad labels
+	- Seal ring
+	- Dummy fill
+
+This hierarchy can be assembled level-by-level:
+
+1. **I/O Level**: The imported pad-level module from Innovus
+2. **Bond-Pad Level**: I/O level + bond pads
+3. **Tapeout Level (Initial)**: Bond-pad level + seal ring
+4. **Tapeout Level (Final)**: Tapeout level (initial) + dummy fill
+
+This tutorial is structured according to these levels.

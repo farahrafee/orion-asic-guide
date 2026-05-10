@@ -1,0 +1,19 @@
+{
+  "id": "frontend-flow/intro",
+  "title": "Introduction",
+  "description": "This tutorial will follow the front-end flow for the ERASICv1 once I get to it.",
+  "source": "@site/docs/frontend-flow/intro.mdx",
+  "sourceDirName": "frontend-flow",
+  "slug": "/frontend-flow/intro",
+  "permalink": "/backend-flow/docs/frontend-flow/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/farahrafee/backend-flow/docs/frontend-flow/intro.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "frontendSidebar"
+}

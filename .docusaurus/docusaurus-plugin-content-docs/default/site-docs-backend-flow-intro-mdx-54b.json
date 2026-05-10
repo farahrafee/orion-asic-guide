@@ -1,0 +1,23 @@
+{
+  "id": "backend-flow/intro",
+  "title": "Introduction",
+  "description": "This tutorial will follow the back-end flow for the ERASICv1. Before starting, three directories should be set up:",
+  "source": "@site/docs/backend-flow/intro.mdx",
+  "sourceDirName": "backend-flow",
+  "slug": "/backend-flow/intro",
+  "permalink": "/backend-flow/docs/backend-flow/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/farahrafee/backend-flow/docs/backend-flow/intro.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "backendSidebar",
+  "next": {
+    "title": "I/O Level",
+    "permalink": "/backend-flow/docs/category/io-level"
+  }
+}

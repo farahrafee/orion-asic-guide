@@ -1,0 +1,27 @@
+{
+  "id": "backend-flow/tapeout-level-final/gds-export",
+  "title": "GDS export",
+  "description": "Once you are ready to export your design, go to the main Virtuoso window and navigate to File &rarr; Export &rarr; Stream.",
+  "source": "@site/docs/backend-flow/tapeout-level-final/gds-export.mdx",
+  "sourceDirName": "backend-flow/tapeout-level-final",
+  "slug": "/backend-flow/tapeout-level-final/gds-export",
+  "permalink": "/backend-flow/docs/backend-flow/tapeout-level-final/gds-export",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/farahrafee/backend-flow/docs/backend-flow/tapeout-level-final/gds-export.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "backendSidebar",
+  "previous": {
+    "title": "Design rule check (DRC)",
+    "permalink": "/backend-flow/docs/backend-flow/tapeout-level-final/drc"
+  },
+  "next": {
+    "title": "Tapeout",
+    "permalink": "/backend-flow/docs/backend-flow/tapeout-level-final/tapeout"
+  }
+}

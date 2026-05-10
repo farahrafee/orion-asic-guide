@@ -1,0 +1,27 @@
+{
+  "id": "backend-flow/io-level/pad-level-module",
+  "title": "Pad-level module",
+  "description": "Create a module called DigitalCorePads that instantiates the \"logical\" top-level (DigitalCore), as well as the I/O pads. You will also need a dummy holder for PCORNER that can be included in the RTL folder of DigitalCorePads. Look at previous code for reference.",
+  "source": "@site/docs/backend-flow/io-level/pad-level-module.mdx",
+  "sourceDirName": "backend-flow/io-level",
+  "slug": "/backend-flow/io-level/pad-level-module",
+  "permalink": "/backend-flow/docs/backend-flow/io-level/pad-level-module",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/farahrafee/backend-flow/docs/backend-flow/io-level/pad-level-module.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "backendSidebar",
+  "previous": {
+    "title": "I/O Level",
+    "permalink": "/backend-flow/docs/category/io-level"
+  },
+  "next": {
+    "title": "Synthesis (SYN)",
+    "permalink": "/backend-flow/docs/backend-flow/io-level/syn"
+  }
+}

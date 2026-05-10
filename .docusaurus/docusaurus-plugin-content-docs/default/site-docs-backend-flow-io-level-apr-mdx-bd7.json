@@ -1,0 +1,27 @@
+{
+  "id": "backend-flow/io-level/apr",
+  "title": "Automatic place and route (APR)",
+  "description": "The script that runs APR is located at apr/apr.tcl. You will need to calculate the desired X and Y dimensions of the chip, which are called CoreX and CoreY in apr.tcl.",
+  "source": "@site/docs/backend-flow/io-level/apr.mdx",
+  "sourceDirName": "backend-flow/io-level",
+  "slug": "/backend-flow/io-level/apr",
+  "permalink": "/backend-flow/docs/backend-flow/io-level/apr",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/farahrafee/backend-flow/docs/backend-flow/io-level/apr.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "backendSidebar",
+  "previous": {
+    "title": "Synthesis (SYN)",
+    "permalink": "/backend-flow/docs/backend-flow/io-level/syn"
+  },
+  "next": {
+    "title": "Bond-Pad Level",
+    "permalink": "/backend-flow/docs/category/bond-pad-level"
+  }
+}

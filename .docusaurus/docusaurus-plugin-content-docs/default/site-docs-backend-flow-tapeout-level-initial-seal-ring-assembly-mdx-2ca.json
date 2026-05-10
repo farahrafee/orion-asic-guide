@@ -1,0 +1,27 @@
+{
+  "id": "backend-flow/tapeout-level-initial/seal-ring-assembly",
+  "title": "Seal ring assembly",
+  "description": "Modify the seal ring template",
+  "source": "@site/docs/backend-flow/tapeout-level-initial/seal-ring-assembly.mdx",
+  "sourceDirName": "backend-flow/tapeout-level-initial",
+  "slug": "/backend-flow/tapeout-level-initial/seal-ring-assembly",
+  "permalink": "/backend-flow/docs/backend-flow/tapeout-level-initial/seal-ring-assembly",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/farahrafee/backend-flow/docs/backend-flow/tapeout-level-initial/seal-ring-assembly.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "backendSidebar",
+  "previous": {
+    "title": "Layout vs. schematic (LVS)",
+    "permalink": "/backend-flow/docs/backend-flow/tapeout-level-initial/lvs"
+  },
+  "next": {
+    "title": "Tapeout Level (Final)",
+    "permalink": "/backend-flow/docs/category/tapeout-level-final"
+  }
+}

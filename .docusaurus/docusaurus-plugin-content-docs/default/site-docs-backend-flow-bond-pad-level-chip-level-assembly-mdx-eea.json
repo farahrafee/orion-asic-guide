@@ -1,0 +1,27 @@
+{
+  "id": "backend-flow/bond-pad-level/chip-level-assembly",
+  "title": "Chip-level assembly",
+  "description": "Create bond-pad level layout",
+  "source": "@site/docs/backend-flow/bond-pad-level/chip-level-assembly.mdx",
+  "sourceDirName": "backend-flow/bond-pad-level",
+  "slug": "/backend-flow/bond-pad-level/chip-level-assembly",
+  "permalink": "/backend-flow/docs/backend-flow/bond-pad-level/chip-level-assembly",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/farahrafee/backend-flow/docs/backend-flow/bond-pad-level/chip-level-assembly.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "backendSidebar",
+  "previous": {
+    "title": "Cadence setup",
+    "permalink": "/backend-flow/docs/backend-flow/bond-pad-level/cadence-setup"
+  },
+  "next": {
+    "title": "Tapeout Level (Initial)",
+    "permalink": "/backend-flow/docs/category/tapeout-level-initial"
+  }
+}

@@ -1,0 +1,52 @@
+---
+sidebar_position: 1
+---
+
+# Verilog-to-LVS (V2LVS)
+
+## Generate the CDL for DigitalCorePads
+
+We will want to run the LVS flow. LVS stands for layout vs. source, where the layout schematic is extracted from the Cadence GDS-imported layout, and the source (CDL file) is generated using `v2lvs` on the place-and-routed netlist. Here, the layout netlist and source netlist are directly compared.
+
+We need to generate the CDL file for **DigitalCorePads** and subsequently **ASIC_ALL**. An example command is shown below:
+
+```bash
+v2lvs -v $(INPUT_FILE).sv$ -o $(OUTPUT_FILE)$
+	-s $(LIB_CDL) -lsr $(LIB_CDL)
+	-s $(PAD_CDL) -lsr $(PAD_CDL)
+	-addpin VDD -addpin VSS -addpin POC
+	-addpin VPW -addpin VNW
+```
+
+The `v2lvs command contains the following flags:
+- `-v`: Specifies the input netlist file name
+- `-o`: Specifies the output netlist file name
+- `-s`: Specifies a library file name to be included using `.INCLUDE` at the top of the output file
+- `-lsr`: Specifies a library file name to be scanned during the `v2lvs` run
+- `-addpin`: Adds a pin with the given name to the top-level of the output
+
+Note that VDD/VSS are not included in the APR netlist because they are not logical pins. The pins VPW/VNW correspond to P-well and N-well taps that are referenced in technology cells. 
+
+To run `v2lvs` for **DigitalCorePads**, you will need the following files:
+
+- **INPUT_FILE**:
+	- `DigitalCorePads/apr/netlist/DigitalCorePads.phys.v`
+- **OUTPUT_FILE**:
+	- `DigitalCorePads_raw.cdl`
+- **LIB_CDL**:
+	- `/afs/eecs.umich.edu/kits/ARM/TSMC_65gp/sc_rvt/aci/sc-ad10/lvs_netlist/tsmc65_rvt_sc_adv10.cdl`
+- **PAD_CDL**:
+	- `~/ER_ASIC_Rev1/PADS/TSMCHOME_SPI/digital/Back_End/spice/tpfn65gpgv2od3_200b/tpfn65gpgv2od3_1_2_modified.spi`
+
+Check that the modified SPI file adds `source.added`, the source file for subcircuits, as an include. It can be found in `65NM_PDK/65 MS RF GP/LVS Command File/Mentor Graphics/../source.added`, and it can be copied into the Cadence directory for ease of use.
+
+## Generate the CDL for ASIC_ALL
+
+Once you have `DigitalCorePads.cdl`, you can make one for **ASIC_ALL**. Create a module called **ASIC_ALL** that instantiates **DigitalCorePads**. The ports are identical to **DigitalCorePads** except DVDD/DVSS are named as VDDPST/VSSPST. Additionally, VSS and VDD are declared as `supply0` and `supply1` respectively. Look at previous code for reference. Run `v2lvs` with `ASIC_ALL.sv` as the input file and `ASIC_ALL_raw.cdl` as the output file.
+
+You need to modify `ASIC_ALL_raw.cdl` to:
+
+1. Add `.CONNECT` statements that connect VSS/VPW, VDD/VNW, VSSPST/DVSS, and VDDPST/DVDD.
+2. Remove `.GLOBAL` statements that conflict with the `.CONNECT` statements.
+
+This can be done right after `v2lvs` is complete using a PY script. Look at `cdl_mod_local.py` in **ASIC_ALL** for reference. Name the modified CDL file `ASIC_ALL.cdl`.

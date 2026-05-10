@@ -114,117 +114,123 @@ export default [
   },
   {
     path: '/backend-flow/docs',
-    component: ComponentCreator('/backend-flow/docs', '21c'),
+    component: ComponentCreator('/backend-flow/docs', '898'),
     routes: [
       {
         path: '/backend-flow/docs',
-        component: ComponentCreator('/backend-flow/docs', 'd63'),
+        component: ComponentCreator('/backend-flow/docs', '786'),
         routes: [
           {
             path: '/backend-flow/docs',
-            component: ComponentCreator('/backend-flow/docs', 'd82'),
+            component: ComponentCreator('/backend-flow/docs', 'af7'),
             routes: [
               {
-                path: '/backend-flow/docs/bond-pad-level/cadence-setup',
-                component: ComponentCreator('/backend-flow/docs/bond-pad-level/cadence-setup', 'dbf'),
+                path: '/backend-flow/docs/backend-flow/bond-pad-level/cadence-setup',
+                component: ComponentCreator('/backend-flow/docs/backend-flow/bond-pad-level/cadence-setup', 'f74'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "backendSidebar"
               },
               {
-                path: '/backend-flow/docs/bond-pad-level/chip-level-assembly',
-                component: ComponentCreator('/backend-flow/docs/bond-pad-level/chip-level-assembly', '538'),
+                path: '/backend-flow/docs/backend-flow/bond-pad-level/chip-level-assembly',
+                component: ComponentCreator('/backend-flow/docs/backend-flow/bond-pad-level/chip-level-assembly', '920'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "backendSidebar"
+              },
+              {
+                path: '/backend-flow/docs/backend-flow/intro',
+                component: ComponentCreator('/backend-flow/docs/backend-flow/intro', '711'),
+                exact: true,
+                sidebar: "backendSidebar"
+              },
+              {
+                path: '/backend-flow/docs/backend-flow/io-level/apr',
+                component: ComponentCreator('/backend-flow/docs/backend-flow/io-level/apr', '8a4'),
+                exact: true,
+                sidebar: "backendSidebar"
+              },
+              {
+                path: '/backend-flow/docs/backend-flow/io-level/pad-level-module',
+                component: ComponentCreator('/backend-flow/docs/backend-flow/io-level/pad-level-module', '35f'),
+                exact: true,
+                sidebar: "backendSidebar"
+              },
+              {
+                path: '/backend-flow/docs/backend-flow/io-level/syn',
+                component: ComponentCreator('/backend-flow/docs/backend-flow/io-level/syn', '2ea'),
+                exact: true,
+                sidebar: "backendSidebar"
+              },
+              {
+                path: '/backend-flow/docs/backend-flow/tapeout-level-final/drc',
+                component: ComponentCreator('/backend-flow/docs/backend-flow/tapeout-level-final/drc', 'bac'),
+                exact: true,
+                sidebar: "backendSidebar"
+              },
+              {
+                path: '/backend-flow/docs/backend-flow/tapeout-level-final/dummy-filler',
+                component: ComponentCreator('/backend-flow/docs/backend-flow/tapeout-level-final/dummy-filler', '0d1'),
+                exact: true,
+                sidebar: "backendSidebar"
+              },
+              {
+                path: '/backend-flow/docs/backend-flow/tapeout-level-final/gds-export',
+                component: ComponentCreator('/backend-flow/docs/backend-flow/tapeout-level-final/gds-export', '452'),
+                exact: true,
+                sidebar: "backendSidebar"
+              },
+              {
+                path: '/backend-flow/docs/backend-flow/tapeout-level-final/tapeout',
+                component: ComponentCreator('/backend-flow/docs/backend-flow/tapeout-level-final/tapeout', '473'),
+                exact: true,
+                sidebar: "backendSidebar"
+              },
+              {
+                path: '/backend-flow/docs/backend-flow/tapeout-level-initial/lvs',
+                component: ComponentCreator('/backend-flow/docs/backend-flow/tapeout-level-initial/lvs', '32f'),
+                exact: true,
+                sidebar: "backendSidebar"
+              },
+              {
+                path: '/backend-flow/docs/backend-flow/tapeout-level-initial/seal-ring-assembly',
+                component: ComponentCreator('/backend-flow/docs/backend-flow/tapeout-level-initial/seal-ring-assembly', 'f67'),
+                exact: true,
+                sidebar: "backendSidebar"
+              },
+              {
+                path: '/backend-flow/docs/backend-flow/tapeout-level-initial/v2lvs',
+                component: ComponentCreator('/backend-flow/docs/backend-flow/tapeout-level-initial/v2lvs', '115'),
+                exact: true,
+                sidebar: "backendSidebar"
               },
               {
                 path: '/backend-flow/docs/category/bond-pad-level',
-                component: ComponentCreator('/backend-flow/docs/category/bond-pad-level', '094'),
+                component: ComponentCreator('/backend-flow/docs/category/bond-pad-level', 'a18'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "backendSidebar"
               },
               {
                 path: '/backend-flow/docs/category/io-level',
-                component: ComponentCreator('/backend-flow/docs/category/io-level', 'ce2'),
+                component: ComponentCreator('/backend-flow/docs/category/io-level', 'f6f'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "backendSidebar"
               },
               {
                 path: '/backend-flow/docs/category/tapeout-level-final',
-                component: ComponentCreator('/backend-flow/docs/category/tapeout-level-final', 'ae9'),
+                component: ComponentCreator('/backend-flow/docs/category/tapeout-level-final', 'fd8'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "backendSidebar"
               },
               {
                 path: '/backend-flow/docs/category/tapeout-level-initial',
-                component: ComponentCreator('/backend-flow/docs/category/tapeout-level-initial', 'bae'),
+                component: ComponentCreator('/backend-flow/docs/category/tapeout-level-initial', 'ba7'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "backendSidebar"
               },
               {
-                path: '/backend-flow/docs/intro',
-                component: ComponentCreator('/backend-flow/docs/intro', '099'),
+                path: '/backend-flow/docs/frontend-flow/intro',
+                component: ComponentCreator('/backend-flow/docs/frontend-flow/intro', 'b2a'),
                 exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/backend-flow/docs/io-level/apr',
-                component: ComponentCreator('/backend-flow/docs/io-level/apr', '180'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/backend-flow/docs/io-level/pad-level-module',
-                component: ComponentCreator('/backend-flow/docs/io-level/pad-level-module', 'b39'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/backend-flow/docs/io-level/syn',
-                component: ComponentCreator('/backend-flow/docs/io-level/syn', 'b46'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/backend-flow/docs/tapeout-level-final/drc',
-                component: ComponentCreator('/backend-flow/docs/tapeout-level-final/drc', 'af1'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/backend-flow/docs/tapeout-level-final/dummy-filler',
-                component: ComponentCreator('/backend-flow/docs/tapeout-level-final/dummy-filler', '9b6'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/backend-flow/docs/tapeout-level-final/gds-export',
-                component: ComponentCreator('/backend-flow/docs/tapeout-level-final/gds-export', 'bfa'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/backend-flow/docs/tapeout-level-final/tapeout',
-                component: ComponentCreator('/backend-flow/docs/tapeout-level-final/tapeout', '427'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/backend-flow/docs/tapeout-level-initial/lvs',
-                component: ComponentCreator('/backend-flow/docs/tapeout-level-initial/lvs', '740'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/backend-flow/docs/tapeout-level-initial/seal-ring-assembly',
-                component: ComponentCreator('/backend-flow/docs/tapeout-level-initial/seal-ring-assembly', '6fe'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/backend-flow/docs/tapeout-level-initial/v2lvs',
-                component: ComponentCreator('/backend-flow/docs/tapeout-level-initial/v2lvs', 'f2e'),
-                exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "frontendSidebar"
               }
             ]
           }
