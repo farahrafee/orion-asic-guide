@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
+<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://farahrafee.github.io/backend-flow/blog</id>
-    <title>Backend Flow Blog</title>
+    <title>Digital ASIC Design Guide Blog</title>
     <updated>2021-08-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://farahrafee.github.io/backend-flow/blog"/>
-    <subtitle>Backend Flow Blog</subtitle>
-    <icon>https://farahrafee.github.io/backend-flow/img/favicon.ico</icon>
+    <subtitle>Digital ASIC Design Guide Blog</subtitle>
+    <icon>https://farahrafee.github.io/backend-flow/img/orion-logo.png</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>https://farahrafee.github.io/backend-flow/blog/welcome</id>
