@@ -6,9 +6,9 @@ const config = {
   title: 'Digital ASIC Design Guide',
   favicon: 'img/orion-logo.png',
   url: 'https://farahrafee.github.io',
-  baseUrl: '/backend-flow/',
+  baseUrl: '/orion-asic-guide/',
   organizationName: 'farahrafee',
-  projectName: 'backend-flow',
+  projectName: 'orion-asic-guide',
   onBrokenLinks: 'throw',
 
   i18n: {
@@ -24,7 +24,7 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           editUrl:
-	    'https://github.com/farahrafee/backend-flow/',
+	    'https://github.com/farahrafee/orion-asic-guide/',
         },
         theme: {
           customCss: './src/css/custom.css',
